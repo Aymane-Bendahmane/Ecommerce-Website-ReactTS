@@ -48,3 +48,6 @@ The Shopping Cart App is a web application built with React and Redux that allow
 - The store items data is fetched from the server using the `getProductsList` function in `src/utilities/ApiUtilities.tsx`.
 - The components for the store items, cart, and spinner are located in the `src/components` directory.
 
+# Deployment
+- The site is deployed using GitHub action workflows and GitHub page for host
+- Check it out via the link : [Ecom Store](https://aymane-bendahmane.github.io/Ecommerce-Website-ReactTS/)
