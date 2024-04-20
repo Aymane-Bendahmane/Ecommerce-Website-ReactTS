@@ -28,7 +28,7 @@ export const showCart = (display: boolean) => {
 };
 
 
-export const addItem = (item: Product) => {
+export const addItem = (item?: Product) => {
     return {
         type: ADD_ITEM,
         payload: {
@@ -36,7 +36,7 @@ export const addItem = (item: Product) => {
         },
     };
 };
-export const decreaseQuantity = (item: Product) => {
+export const decreaseQuantity = (item?: Product) => {
     return {
         type: DECREASE_ITEM_QUANTITY,
         payload: {

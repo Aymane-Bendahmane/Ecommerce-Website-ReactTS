@@ -12,7 +12,7 @@ interface CartItemProps {
 
 export function CartItem({id, quantity}: CartItemProps) {
     const items: Product[] = useSelector((state: CartReducer) => state.items);
-    const item: Product = items.find((elem) => elem.id === id);
+    const item: Product | undefined = items.find((elem) => elem.id === id) ;
     const dispatch = useDispatch();
 
     const handleRemoveItem = () => {
@@ -21,6 +21,7 @@ export function CartItem({id, quantity}: CartItemProps) {
         }
     };
 
+
     function addItemToCard() {
         dispatch(addItem(item))
     }
@@ -28,7 +29,9 @@ export function CartItem({id, quantity}: CartItemProps) {
     function decreaseProductQuantity() {
         dispatch(decreaseQuantity(item));
     }
-
+    if(!item){
+        return <div>Error</div>
+    }
     return (
         <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
             <Link to={`/product/${item?.id}`}>

@@ -16,7 +16,7 @@ const getInitialTotal = () => {
     const total = localStorage.getItem("total");
     return total ? JSON.parse(total) : 0;
 };
-const updateLocalStorage = (key, value) => {
+const updateLocalStorage = (key: string, value: any) => {
     localStorage.setItem(key, JSON.stringify(value));
 }
 const initialState = {
@@ -34,6 +34,7 @@ const cartReducer = (state = initialState, action: {
     switch (action.type) {
 
         case DELETE_ITEM:
+            // eslint-disable-next-line no-case-declarations
             const deleteResult = deleteShoppingItem(action.payload.shoppingItem.id, state.shoppingItems)
             return {
                 ...state,
@@ -157,7 +158,7 @@ const calculateTotal = (shoppingItems: ShoppingItem[]): number => {
  * @param total - The total value to be stored.
  * @param shoppingItems - The shoppingItems array to be stored.
  */
-const updateLocalStorageShoppingItemAndTotal = (total, shoppingItems) => {
+const updateLocalStorageShoppingItemAndTotal = (total: number, shoppingItems: ShoppingItem[]) => {
     updateLocalStorage('total', total);
     updateLocalStorage('shoppingItems', shoppingItems);
 };
