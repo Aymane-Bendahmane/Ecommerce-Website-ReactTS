@@ -18,6 +18,7 @@ function App() {
 
                     <Route index element={<Store/>}/>
                     <Route path="/store" element={<Store/>}/>
+                    <Route path="/" element={<Store/>}/>
                     <Route path="/product/:productId" element={<ProductDetail/>}/>
 
                 </Routes>
