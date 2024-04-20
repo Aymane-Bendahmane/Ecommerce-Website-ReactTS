@@ -1,7 +1,7 @@
 {
   "homepage": "https://Aymane-Bendahmane.github.io/Ecommerce-Website-ReactTS",
   "name": "ecom-website",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
