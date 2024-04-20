@@ -17,10 +17,9 @@ function App() {
                 <Routes>
 
                     <Route index element={<Store/>}/>
-                    <Route path="/dpl/store" element={<Store/>}/>
-                    <Route path="/dpl/" element={<Store/>}/>
+                    <Route path="/store" element={<Store/>}/>
                     <Route path="/product/:productId" element={<ProductDetail/>}/>
-
+                    <Route path="*" element={<Store/>}/>
                 </Routes>
             </Container>
 
