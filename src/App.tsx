@@ -15,7 +15,6 @@ function App() {
             <ShoppingCart isOpen={showCart}/>
             <Container className="mb-4">
                 <Routes>
-
                     <Route index element={<Store/>}/>
                     <Route path="/store" element={<Store/>}/>
                     <Route path="/product/:productId" element={<ProductDetail/>}/>
